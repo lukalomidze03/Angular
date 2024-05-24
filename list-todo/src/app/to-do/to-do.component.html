@@ -1,0 +1,10 @@
+<div class="conteiner">
+    <form #form="ngForm">
+        <input type="text" name="to-do" [(ngModel)]='toDo' required>
+        <button type="button" (click)="subbutom(form)" >submit</button>
+        <br>
+        <p>{{toDo}}</p>
+    
+    
+    </form>
+</div>
