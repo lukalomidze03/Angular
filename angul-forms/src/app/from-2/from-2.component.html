@@ -1,0 +1,17 @@
+
+<hr>
+<p>angular  driven form example:</p>
+
+<form #f="ngForm" (ngSubmit)="submit(f)">
+
+<input type="text" name="firstname" ngModel placeholder="first name" required><br>
+<span *ngIf="f.controls['firstname'].invalid && f.controls['firstname'].touched"> required firstname</span>
+<br><br>
+<input type="text" name="lastname" ngModel placeholder="last name" required><br>
+<span *ngIf="f.controls['lastname'].invalid && f.controls['lastname'].touched"> required lastname</span>
+
+<br><br>
+<input type="submit" value="submit">
+
+
+</form>
