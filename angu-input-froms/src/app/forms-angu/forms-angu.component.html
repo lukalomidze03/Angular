@@ -1,0 +1,15 @@
+
+<form [formGroup]="form" (ngSubmit)="subbtn()">
+  <input type="email" placeholder="email" formControlName="email" />
+  <br />
+  <br />
+  <input type="password" placeholder="password" formControlName="password" />
+  <br />
+  <br />
+  <button type="submit">enter</button>
+</form>
+<br>
+<pre>
+    {{form.value| json}}
+    {{form.status| json}}
+</pre>
