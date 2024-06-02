@@ -5,6 +5,11 @@ import { ContactComponent } from './contact/contact.component'
 
 
 export const routes:Routes=[
+    {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full',
+      },
 {
     path:'home',
     component:HomeComponent,
@@ -21,8 +26,11 @@ export const routes:Routes=[
     path:'product',
    loadChildren: () => import('./products/products.module').then(a => a.ProductsModule)
 },
-
-
+{
+    path: '**',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
  ]
 
  

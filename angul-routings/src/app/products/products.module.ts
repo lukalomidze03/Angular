@@ -4,17 +4,38 @@ import { ProductsComponent } from './products.component';
 import { MobileComponent } from './mobile/mobile.component';
 import { TvComponent } from './tv/tv.component';
 import {  RouterModule, Routes } from '@angular/router';
+import { SingleProductComponent } from './single-product/single-product.component';
 
 
 const routes:Routes=[
   {
-    path:'tv',
-    component:TvComponent
-  },
-  {
-    path:'mobile',
-    component:MobileComponent
+    path:'',
+    component:ProductsComponent,
+    children:[
+      {
+        path:'',
+        redirectTo:'mobile',
+        pathMatch:'full'
+      },
+      {
+        path:'mobile',
+        component:MobileComponent
+      },
+      {
+        path:'mobile/:id',
+        component:SingleProductComponent
+      },
+      {
+        path:'tv',
+        component:TvComponent
+      },
+      {
+        path:'tv/:id',
+        component:SingleProductComponent
+      },
+    ]
   }
+
 ]
 
 
@@ -24,6 +45,7 @@ const routes:Routes=[
     MobileComponent,
     TvComponent,
     MobileComponent,
+    SingleProductComponent,
     
     
   ],
@@ -31,6 +53,7 @@ const routes:Routes=[
     CommonModule,
     RouterModule.forChild(routes)
   
-  ]
+  ],
+  exports: [RouterModule]
 })
 export class ProductsModule { }
