@@ -1,0 +1,37 @@
+<p>rxjsconteiner works!</p>
+<!-- 
+<div *ngFor="let user of users$ | async">
+    {{user.name}}
+  </div>
+
+  <br>
+
+  <div *ngFor="let username of usernames$ | async">
+    {{username}}
+  </div>
+
+
+   -->
+  <br>
+
+  <div *ngFor="let user of filtredUser$ | async">
+    {{user.name}}
+  </div>
+
+
+  <br>
+
+  <!-- part1 -->
+<!-- 
+  <div *ngIf="user$ | async">
+    {{(user$ | async)?.name}}
+  </div> -->
+
+  
+  <br>
+
+    <!-- part2   -->
+
+  <div *ngIf="user$ | async as user">
+    {{user.name}}
+  </div>
