@@ -1,0 +1,19 @@
+<h3>{{userId? "Edit" : "Create" }} user</h3>
+<form [formGroup]="form" (ngSubmit)="submit()"> 
+    <input type="text" placeholder="full name" formControlName="fullName">
+    <br>
+    <input type="number" placeholder="age" formControlName="age">
+    <br>
+    <input type="email" placeholder="email" formControlName="email">
+    <br>roles
+    <select>
+        <option ngValue="user" >user</option>
+        <option ngValue="admin" [defaultSelected]="true">admin</option>
+    </select>
+    <br>
+    <input type="password" placeholder="password" formControlName="password">
+    <br>
+    <input type="submit"  value="save user">
+    
+</form>
+
