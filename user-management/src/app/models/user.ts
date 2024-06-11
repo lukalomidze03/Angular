@@ -1,9 +1,16 @@
-type roletype= 'user' | 'admin' 
+type roleType= 'user' | 'admin' 
+
 export interface IUser{
     id?:string,
     fullName:string,
     age:number,
-    role:roletype,
-    email:string, 
-    password:string,
+    role:roleType,
+    email:string,
+    password:string
 }
+
+export interface IAuthUser{
+    email:string,
+    password:string
+}
+
