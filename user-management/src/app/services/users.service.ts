@@ -32,7 +32,7 @@ export class UsersService {
   delete(id:string):Observable<any>{
     return this.http.delete<any>(`http://localhost:3000/users/${id}`)
   }
-  signInn(parm:IAuthUser):Observable<IUser|null>{
+  sigIn(parm:IAuthUser):Observable<IUser|null>{
     return this.getUsers().pipe(
       map((users:IUser[])=>{
         const user:IUser|undefined=users.find((user:IUser)=>user.password===parm.password && user.email===parm.email )

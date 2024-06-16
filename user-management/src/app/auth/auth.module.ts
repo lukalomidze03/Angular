@@ -1,25 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {  RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './auth.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 const routes:Routes=[
-  {
-    path:'',
-    component:AuthComponent
-  },
-  {
-    path:'',
+  {    
+    path:'signUp',
     component:SignUpComponent
   },
   {
-    path:'',
+    path:'signIn',
     component:SignInComponent
-  },
+  }
 ]
+
 
 @NgModule({
   declarations: [
@@ -27,10 +24,13 @@ const routes:Routes=[
     SignUpComponent,
     SignInComponent
   ],
+  exports:[
+    AuthComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     ReactiveFormsModule
   ]
 })
-export class AouthModule { }
+export class AuthModule { }

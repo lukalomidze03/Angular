@@ -1,4 +1,7 @@
-<button routerLink="/aouth/signUp">Sing Up</button>
-<button routerLink="/aouth/signIn">Sing Ip</button>
+<div class="btn-wrapper">
+<button *ngIf="!(user$ | async)" routerLink="/signUp">Sing Up</button>
+<button routerLink="/signIn" *ngIf="!(user$ | async)">Sing Ip</button>
+<button *ngIf="user$ | async" (click)="logout()">Logout</button>
+</div>
 
 <router-outlet></router-outlet>

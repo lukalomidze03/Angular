@@ -30,7 +30,7 @@ export class SignInComponent {
 
 submit() {
     if (this.form.invalid) return;
-    this.userService.signInn(this.form.value).pipe(
+    this.userService.signIn(this.form.value).pipe(
       tap((user: IUser | null) => {
         if (user) {
           this.storageService.setUser(user);

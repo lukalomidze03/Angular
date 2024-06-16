@@ -5,6 +5,7 @@ import { IUser } from '../models/user';
   providedIn: 'root'
 })
 export class StorageService {
+  user$: any;
 
   constructor() { }
 
