@@ -1,5 +1,12 @@
 {
   "users": [
-
+    {
+      "id": "19e2",
+      "fullName": "luka",
+      "age": 21,
+      "role": "user",
+      "email": "luka@exp.com",
+      "password": "123544334"
+    }
   ]
 }

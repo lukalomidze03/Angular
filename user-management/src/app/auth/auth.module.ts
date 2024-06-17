@@ -25,7 +25,7 @@ const routes:Routes=[
     SignInComponent
   ],
   exports:[
-    AuthComponent,
+    AuthComponent
   ],
   imports: [
     CommonModule,
