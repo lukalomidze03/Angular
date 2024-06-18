@@ -1,10 +1,13 @@
-import { Directive } from '@angular/core';
+import { Directive, TemplateRef } from '@angular/core';
 
 @Directive({
-  selector: '[appNot]'
+  selector: '[Not]'
 })
 export class NotDirective {
-
-  constructor() { }
+  hasView:boolean=false
+  constructor(
+    private templateRef: TemplateRef<any>,
+    
+  ) { }
 
 }

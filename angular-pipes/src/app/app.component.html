@@ -1,0 +1,30 @@
+<h1>angular pipes</h1>
+<!-- LowerCase Pipe and UpperCase Pipe -->
+<h3>{{'upperpipes' | uppercase}}</h3>
+<h3>{{'lowerpipes' | lowercase}}</h3>
+<!-- Json Pipe -->
+<h3>{{ person1 | json}}</h3>
+<!-- AsyncPipe  -->
+<h3>person name: {{name$ | async }}</h3>
+<button (click)="setName()">set name</button>
+<!-- Date Pipe -->
+<h3>product {{ dater }}</h3>
+<h3>product {{ dater | date }}</h3>
+<h3>product {{ dater | date:'fullDate' }}</h3>
+<h3>product {{ dater | date:'short' }}</h3>
+
+<!-- Currency Pipe -->
+<h3> Price: {{ price | currency }}</h3>
+<h3> Price: {{ price | currency:'EUR':'symbol-narrow':'4.2-2'  }}</h3>
+<!-- PercentPipe -->
+<H3>Percent: {{ myNumber | percent }}</H3>
+<!-- SlicePipe -->
+<h3>slicers array org : {{ myArray }}</h3>
+<h3>slicers array : {{ myArray |slice:1:2 }}</h3>
+<!-- TitleCasePipe -->
+<h3>title case: {{ myString }}</h3>
+<h3>title case: {{ myString | titlecase}}</h3>
+<hr>
+<!-- doublepurepipes -->
+ <h3>{{mynimbr | doublePure }}</h3>
+ <button (click)="changeArray()">set new array</button>
