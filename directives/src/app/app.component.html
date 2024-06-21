@@ -1,6 +1,24 @@
-<h3 BackgroundRed="green">hello director</h3>
+<!-- <h3 BackgroundRed="green">hello director</h3>
 <h3 BackgroundRed="yellow">hello director</h3>
-<h3 BackgroundRed="orange">hello director</h3>
+<h3 BackgroundRed="orange">hello director</h3> -->
 <h3 BackgroundRed="red" >hello director</h3>
 <hr>
-<h2 *not="false" > not directive  </h2>
+<h2 *ngIf="count==1; else elseBlock">if count equals 1 </h2>
+
+
+<ng-template #elseBlock>
+
+    <h2>if count do's not equals 1 </h2>
+    </ng-template>
+
+
+    <h2 *not="false" > not directive  </h2>
+
+
+<ng-template  [not]="count==1">
+
+    <h2> not directive  </h2>
+
+</ng-template>
+
+<div [asterisk]="4"></div>

@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public count: number=2 
-  title = 'directives';
+  
 }
